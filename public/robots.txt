@@ -1,0 +1,9 @@
+# robots.txt — replace https://www.example.com with your real domain.
+User-agent: *
+Allow: /
+# Individual case links are private jokes between people — never index them.
+Disallow: /case/
+Disallow: /case-not-found
+Disallow: /api/
+
+Sitemap: https://www.example.com/sitemap.xml

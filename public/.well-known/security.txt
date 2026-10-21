@@ -1,0 +1,5 @@
+# Replace the contact address and domain with your own.
+Contact: mailto:hello@example.com
+Expires: 2027-10-21T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://www.example.com/.well-known/security.txt

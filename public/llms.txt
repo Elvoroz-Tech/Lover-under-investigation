@@ -1,0 +1,7 @@
+# Relationship roast certificate generator
+> Pick a funny preset "crime" for your partner, get an official-looking joke certificate, share the link. No signup, no database; cases live inside the link.
+
+- [Home](https://www.example.com/)
+- [Open a case](https://www.example.com/investigate)
+- [How it works](https://www.example.com/how-it-works)
+- [Privacy](https://www.example.com/privacy)

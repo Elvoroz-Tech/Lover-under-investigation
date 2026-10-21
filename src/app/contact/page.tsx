@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import ProsePage, { Card } from "@/components/ProsePage";
 import Reveal from "@/components/Reveal";
-import { APP_NAME, CONTACT_EMAIL } from "@/lib/config";
+import { APP_NAME, COMPANY_EMAIL, COMPANY_NAME, CONTACT_EMAIL } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with the team behind ${APP_NAME}.`,
+  description: `Get in touch with the ${COMPANY_NAME} team behind ${APP_NAME}.`,
   alternates: { canonical: "/contact" },
 };
 
@@ -26,6 +26,15 @@ export default function Contact() {
           ✉️ Open my email app
         </a>
       </Reveal>
+      <Card icon="🏢" title={`Business & partnerships · ${COMPANY_NAME}`} delay={0.03}>
+        <p>
+          {APP_NAME} is designed, developed and operated by <b>{COMPANY_NAME}</b>. For business enquiries,
+          partnerships, media requests or legal matters, please contact {COMPANY_NAME} directly.
+        </p>
+        <a className="btn btn--ghost btn--block" href={`mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(`${APP_NAME} — business enquiry`)}`}>
+          🏢 {COMPANY_EMAIL}
+        </a>
+      </Card>
       <Card icon="📮" title="Quick topics" delay={0.05}>
         <div style={{ display: "grid", gap: 8 }}>
           {TOPICS.map(([e, label, subject]) => (

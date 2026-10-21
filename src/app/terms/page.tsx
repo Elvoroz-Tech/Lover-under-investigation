@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProsePage, { Card } from "@/components/ProsePage";
-import { APP_NAME, CONTACT_EMAIL } from "@/lib/config";
+import { APP_NAME, COMPANY_EMAIL, COMPANY_NAME, CONTACT_EMAIL } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Terms",
@@ -12,6 +12,9 @@ export const metadata: Metadata = {
 export default function Terms() {
   return (
     <ProsePage eyebrow="Terms of use" title="The" accent="terms." lede="Plain-English terms. Using the site means you agree to them." updated="21 Oct 2026">
+      <Card icon="🏢" title="Who we are">
+        <p>{APP_NAME} is a product designed, developed and operated by <b>{COMPANY_NAME}</b> (“we”, “us”). These terms govern your use of the website. Company enquiries: <a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a>.</p>
+      </Card>
       <Card icon="🎭" title="It's a joke">
         <p>{APP_NAME} creates humorous, fictional “certificates”. They are not legal, official, medical, or factual statements about anyone. The “Bureau” and every case are made up.</p>
       </Card>
@@ -31,7 +34,7 @@ export default function Terms() {
         <p>The site is provided “as is”, free of charge, without warranties. We aren&apos;t liable for how a roast is received, relationship arguments about fries, or anything else arising from use of the site, to the extent permitted by law.</p>
       </Card>
       <Card icon="🔁" title="Changes" delay={0.24}>
-        <p>We may update these terms; the date above will change when we do. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+        <p>We may update these terms; the date above will change when we do. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> or <a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a>.</p>
       </Card>
     </ProsePage>
   );
